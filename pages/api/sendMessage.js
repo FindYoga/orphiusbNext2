@@ -7,7 +7,7 @@ export default function handler(req, res) {
   if (req.method === "POST") {
     const { message } = req.body;
     var token = functions.getAccessToken().then((result) => {
-      console.dir(`the message is this ${message}`);
+      console.log(`the token is this ${token}`);
       return functions.sendMessage(result, message);
     });
     // Process the message as needed (e.g., save to database, send notification, etc.)
