@@ -1,0 +1,39 @@
+.container {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightblue;
+  /* display: flex; */
+  align-items: center; /* This centers vertically */
+  height: 100vh; /* This ensures the container takes up the full height of the viewport */
+}
+
+.formGroup {
+  margin-bottom: 10px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input {
+  width: calc(100% - 20px); /* Subtracting padding from the width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.submitButton {
+  width: calc(100% - 20px); /* Subtracting padding from the width */
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
