@@ -29,3 +29,4 @@ pages/api/.env
 .next/BUILD_ID
 .next/build-manifest.json
 .next/.DS_Store
+pages/api/orphiusb-service-cred.json

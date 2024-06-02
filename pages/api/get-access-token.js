@@ -2,7 +2,12 @@ var admin = require("firebase-admin");
 const { JWT } = require("google-auth-library");
 var request = require("request");
 const axios = require("axios");
-var serviceAccount = require("./orphiusb-service-cred.json");
+const dotenv = require("dotenv");
+dotenv.config();
+
+// Load environment variables from .env file
+
+// console.log(JSON.parse(process.env.GOOGLE));
 
 // admin.initializeApp({
 //   credential: admin.credential.applicationDefault(),
@@ -12,7 +17,7 @@ var serviceAccount = require("./orphiusb-service-cred.json");
 module.exports = {
   getAccessToken: function () {
     return new Promise(function (resolve, reject) {
-      const key = serviceAccount;
+      const key = JSON.parse(process.env.GOOGLE);
       const jwtClient = new JWT(
         key.client_email,
         null,
