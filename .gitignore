@@ -2,4 +2,3 @@ node_modules/
 node_modules/.bin/resolve
 pages/api/.env
 pages/api/orphiusb-service-cred.json
-pages/api/getKey.js
