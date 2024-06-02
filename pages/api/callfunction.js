@@ -1,4 +1,4 @@
-const functions = require("./getKey");
+const functions = require("./get-access-token");
 const dotenv = require("dotenv");
 
 // Load environment variables from .env file

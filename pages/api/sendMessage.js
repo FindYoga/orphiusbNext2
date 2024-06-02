@@ -1,5 +1,5 @@
 const axios = require("axios");
-const sendMessageFunction = require("./getKey");
+const sendMessageFunction = require("./get-access-token");
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
