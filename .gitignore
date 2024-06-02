@@ -5,3 +5,27 @@ pages/api/.env
 .swc/
 .*.env
 
+.next/trace
+.next/static/73kcVRT62Vj-wLA3-q6Xb/_ssgManifest.js
+.next/static/73kcVRT62Vj-wLA3-q6Xb/_buildManifest.js
+.next/static/.DS_Store
+.next/server/pages/index.html
+.next/server/pages/api/sendMessage.js.nft.json
+.next/server/pages/api/getKey.js.nft.json
+.next/server/pages/api/callfunction.js.nft.json
+.next/server/pages/500.html
+.next/server/pages/404.html
+.next/server/pages-manifest.json
+.next/server/middleware-build-manifest.js
+.next/server/.DS_Store
+.next/prerender-manifest.json
+.next/next-server.js.nft.json
+.next/next-minimal-server.js.nft.json
+.next/cache/webpack/server-production/index.pack
+.next/cache/webpack/server-production/0.pack
+.next/cache/webpack/client-production/index.pack
+.next/cache/webpack/client-production/0.pack
+.next/cache/.DS_Store
+.next/BUILD_ID
+.next/build-manifest.json
+.next/.DS_Store
