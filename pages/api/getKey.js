@@ -34,39 +34,4 @@ module.exports = {
       });
     });
   },
-
-  sendMessage: function (token, message) {
-    console.log(`the token is ${token}`);
-    const headers = {
-      headers: {
-        "Content-Type": "application/json",
-
-        Authorization: `Bearer ${token}`,
-      },
-    };
-    // console.log(message);
-    axios
-      .post(
-        "https://fcm.googleapis.com/v1/projects/orphiusb-7f241/messages:send",
-        message,
-        headers
-      )
-      .then(async function (response) {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error("Error:", error.message);
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          console.error("Status:", error.response.status);
-          console.error("Data:", error.response.data);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error("Request:", error.request);
-        } else {
-          // Something happened in setting up the request that triggered an error
-          console.error("Error:", error.message);
-        }
-      });
-  },
 };
