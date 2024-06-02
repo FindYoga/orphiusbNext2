@@ -44,7 +44,7 @@ module.exports = {
         Authorization: `Bearer ${token}`,
       },
     };
-    console.log(message);
+    // console.log(message);
     axios
       .post(
         "https://fcm.googleapis.com/v1/projects/orphiusb-7f241/messages:send",
