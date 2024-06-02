@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/styles.module.css";
 
 export default function Home() {
-  const [data, setMessage] = useState({
+  const [data, setData] = useState({
     token:
       "egpK706FdEWAsTiJ5d9HU0:APA91bFGzUu3qGDubUjcVHjTy5DXTgoZIMH84zbso9YHBNRp6-1aWCim-TdjVZbNlskz9D9ofglugdUO6g2SbnDYNP6rxSPmhZLzf1YsW-dEjkuxRtXUum2aqKK_ssC4quKr5S4hM2kl",
     notification: {
@@ -15,32 +15,33 @@ export default function Home() {
   });
 
   const handleChange = (e) => {
-    // console.log(e);
     const { name, value } = e.target;
     const [section, key] = name.split(".");
 
     if (key) {
-      setMessage({
-        ...data,
+      setData((prevData) => ({
+        ...prevData,
         [section]: {
-          ...data[section],
+          ...prevData[section],
           [key]: value,
         },
-      });
+      }));
     } else {
-      setMessage({
-        ...data,
+      setData((prevData) => ({
+        ...prevData,
         [name]: value,
-      });
+      }));
     }
   };
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    var parentKey = "message"; // Replace "yourParentKey" with your desired parent key
+    var parentKey = "message";
     var message = {};
     message[parentKey] = data;
+
     console.log(message);
+
     try {
       const response = await fetch("/api/sendMessage", {
         method: "POST",
@@ -58,7 +59,7 @@ export default function Home() {
     } catch (error) {
       console.error("Network error:", error);
     }
-  }
+  };
 
   return (
     <div className={styles.container}>
